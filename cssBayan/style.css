@@ -1,0 +1,208 @@
+hr {
+  margin: 0px;
+  border-width: 0.1vw;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+  background-color: #303030;
+}
+
+/*---------------------------------accordion---------------------------------*/
+.ac-wrapper {
+  width: 85vw;
+  margin: 0px auto;
+}
+
+.ac-container {
+  margin: 0px auto;
+  text-align: left;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* gap: calc(1vw) 0px; */
+}
+
+.div-label {
+  width: 70vw;  
+}
+
+.ac-container label {
+  padding: 3% 1%;
+  position: relative;
+  z-index: 20;
+  display: block;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.ac-container input {
+  display: none;
+}
+
+.ac-container-div {
+  /* display: block; */
+  display: flex;
+  min-width: 50vw;
+  min-height: 5vw;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.article-content {
+  padding: 2% 0%;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ac-container article {
+  width: 0rem;
+  height: 0rem;
+  /* margin-top: -35px; */
+  /* background: #D6E7D2; */
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: 2s; 
+  /* z-index: 10; */
+  -webkit-transition: height 1s ease-in-out,box-shadow 0.6s linear;
+  -moz-transition: height 1s ease-in-out,box-shadow 0.6s linear;
+  -o-transition: height 1s ease-in-out,box-shadow 0.6s linear;
+  -ms-transition: height 1s ease-in-out,box-shadow 0.6s linear;
+  transition: height 1s ease-in-out,box-shadow 0.6s linear;
+}
+
+.ac-container input:checked ~ article {
+  -webkit-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+  -moz-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+  -o-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+  -ms-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+  transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+}
+
+.ac-container input:checked ~ article.ac-medium {
+  height: 154px;
+}
+
+.div-label:active .div-label__title > p{
+  color: rgb(0, 89, 233);
+}
+
+.div-label:hover .div-label__title > p{
+  color: #303030;
+}
+
+.ac-container:hover .div-label__title img{
+  display: block;
+}
+
+.ac-container:hover .div-label__title > p{
+  color: rgb(0, 89, 233);
+}
+
+.div-label p {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.7vw;
+  
+  padding: 0px;
+  margin: 0px;
+  /* margin-bottom: 12px; */
+
+  color: #000000;  
+}
+
+.div-label__title {
+  display: flex;
+
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+
+  transition: 50ms;
+}
+
+.div-label__title img{
+  width: 3%;
+  height: 3%;
+  display: none;
+}
+
+.article-content img{
+  width: 25vw;
+  position: relative;
+  transform: translateY(0%);
+  animation-duration: 2s;
+}
+/*---------------------------------accordion---------------------------------*/
+
+
+
+#ac-container-div__label1:hover #ac-medium-1 {
+  height: 28vw;
+  width: 50vw;
+}
+
+/* #ac-container-div__label1:hover .div-label__arrow {
+  background-image: url('images/accordion_btn2.png')
+} */
+
+
+#ac-container-div__label1:active #ac-medium-1 {
+  height: 28vw;
+  width: 50vw;
+}
+#ac-container-div__label1:active #ac-medium-2 {
+  height: 0px;
+  width: 0px;
+}
+#ac-container-div__label1:active #ac-medium-3 {
+  height: 0px;
+  width: 0px;
+}
+
+
+#ac-container-div__label2:hover #ac-medium-2 {
+  height: 28vw;
+  width: 50vw;
+}
+
+#ac-container-div__label2:active #ac-medium-2 {
+  height: 28vw;
+  width: 50vw;
+}
+#ac-container-div__label2:active #ac-medium-1 {
+  height: 0px;
+  width: 0px;
+}
+#ac-container-div__label2:active #ac-medium-3 {
+  height: 0px;
+  width: 0px;
+}
+
+
+#ac-container-div__label3:hover #ac-medium-3 {
+  height: 28vw;
+  width: 50vw;
+}
+
+#ac-container-div__label3:active #ac-medium-3 {
+  height: 28vw;
+  width: 50vw;
+}
+#ac-container-div__label3:active #ac-medium-2 {
+  height: 0px;
+  width: 0px;
+}
+#ac-container-div__label3:active #ac-medium-1 {
+  height: 0px;
+  width: 0px;
+}
